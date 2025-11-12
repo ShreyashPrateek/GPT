@@ -16,7 +16,7 @@ A powerful GPT application built with LangChain and Hugging Face, featuring a be
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
+   git clone https://github.com/ShreyashPrateek/GPT.git
    cd my_gpt_project
    ```
 
