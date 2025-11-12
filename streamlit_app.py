@@ -9,5 +9,5 @@ import os
 # Add current directory to path
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
-# Import and run the interface
-from ui.interface import *
+# Import the interface content
+exec(open('ui/interface.py').read())
