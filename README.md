@@ -67,6 +67,10 @@ my_gpt_project/
 - [Hugging Face](https://huggingface.co/) - AI models
 - [Streamlit](https://streamlit.io/) - Web interface
 
+## 🌐 Live Demo
+
+**Try the live application:** [https://shreyashgpt.streamlit.app/](https://shreyashgpt.streamlit.app/)
+
 ---
 
 Made with ❤️ by Shreyash Prateek
