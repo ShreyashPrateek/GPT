@@ -19,3 +19,4 @@ requests
 tenacity
 numpy
 pandas
+Pillow
