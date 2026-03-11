@@ -20,3 +20,4 @@ tenacity
 numpy
 pandas
 Pillow
+beautifulsoup4
