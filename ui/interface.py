@@ -11,11 +11,24 @@ from app.memory_manager import memory
 from app.config import APP_NAME
 from app.image_generator import generate_image
 from app.chat_history import init_chat_history, auto_save_chat, auto_save_images, get_all_history, load_history_item, delete_history_item
+from app.view_counter import get_view_count, increment_view_count
 
 st.set_page_config(page_title=f"{APP_NAME}", page_icon="🤖", layout="wide")
 
-st.title(f"🤖 {APP_NAME}")
-st.write("**Powered by LangChain + Hugging Face**")
+# Global view counter - increment only once per session
+if "session_counted" not in st.session_state:
+    st.session_state.session_counted = True
+    increment_view_count()
+
+view_count = get_view_count()
+
+# Title with view counter
+col1, col2 = st.columns([3, 1])
+with col1:
+    st.title(f"🤖 {APP_NAME}")
+    st.write("**Powered by LangChain + Hugging Face**")
+with col2:
+    st.markdown(f"<div style='text-align: right; padding-top: 20px;'><h5>👥 User Interactions: {view_count}</h5></div>", unsafe_allow_html=True)
 
 init_chat_history()
 
